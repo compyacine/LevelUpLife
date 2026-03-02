@@ -22,3 +22,17 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Capacitor
+# /android  <-- Keep the folder
+# /ios      <-- Keep if exists
+/www
+
+# Android build artifacts
+android/build
+android/app/build
+android/captures
+android/.gradle
+android/.idea
+android/*.iml
+android/local.properties
