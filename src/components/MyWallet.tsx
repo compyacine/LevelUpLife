@@ -18,7 +18,7 @@ export default function MyWallet() {
     const [category, setCategory] = useState('');
     const [description, setDescription] = useState('');
 
-    const dateLocale = lang === 'fr' ? 'fr-FR' : lang === 'en' ? 'en-US' : 'ar-SA';
+    const dateLocale = lang === 'fr' ? 'fr-FR' : lang === 'en' ? 'en-US' : 'ar-u-nu-latn';
 
     const defaultCategories = {
         expense: ['Food', 'Transport', 'Shopping', 'Bills', 'Entertain', 'Other'],

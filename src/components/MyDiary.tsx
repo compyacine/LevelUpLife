@@ -28,7 +28,7 @@ export default function MyDiary() {
     // Search state
     const [searchQuery, setSearchQuery] = useState('');
 
-    const dateLocale = lang === 'fr' ? 'fr-FR' : lang === 'en' ? 'en-US' : 'ar-SA';
+    const dateLocale = lang === 'fr' ? 'fr-FR' : lang === 'en' ? 'en-US' : 'ar-u-nu-latn';
 
     useEffect(() => {
         localStorage.setItem('digitpro_diary_entries', JSON.stringify(entries));

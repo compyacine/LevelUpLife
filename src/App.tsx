@@ -192,7 +192,7 @@ function AppContent() {
     myReading: '📚',
   };
 
-  const dateLocale = lang === 'fr' ? 'fr-FR' : lang === 'en' ? 'en-US' : 'ar-SA';
+  const dateLocale = lang === 'fr' ? 'fr-FR' : lang === 'en' ? 'en-US' : 'ar-u-nu-latn';
 
   return (
     <div className="flex h-screen overflow-hidden" dir={dir} style={{ background: 'var(--bg-main)' }}>

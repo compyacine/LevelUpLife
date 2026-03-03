@@ -112,7 +112,7 @@ export default function MyHealth() {
                     <div className="flex justify-between items-start z-10 relative">
                         <div>
                             <p className="text-sm font-bold opacity-60 mb-1" style={{ color: 'var(--text-primary)' }}>{t('stepsCount' as any)}</p>
-                            <h2 className="text-3xl font-black text-blue-500">{todayData.steps.toLocaleString()}</h2>
+                            <h2 className="text-3xl font-black text-blue-500">{todayData.steps.toLocaleString('en-US')}</h2>
                         </div>
                         <div className="p-3 rounded-2xl bg-blue-500/10 text-blue-500">
                             <Activity size={24} />
@@ -130,7 +130,7 @@ export default function MyHealth() {
                     <div className="flex justify-between items-start z-10 relative">
                         <div>
                             <p className="text-sm font-bold opacity-60 mb-1" style={{ color: 'var(--text-primary)' }}>{t('caloriesBurned' as any)}</p>
-                            <h2 className="text-3xl font-black text-orange-500">{todayData.calories.toLocaleString()}</h2>
+                            <h2 className="text-3xl font-black text-orange-500">{todayData.calories.toLocaleString('en-US')}</h2>
                         </div>
                         <div className="p-3 rounded-2xl bg-orange-500/10 text-orange-500">
                             <Flame size={24} />
@@ -288,7 +288,7 @@ export default function MyHealth() {
                                     <div key={i} className="flex-1 flex flex-col items-center gap-2 group relative">
                                         {/* Tooltip */}
                                         <div className="absolute -top-8 bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-10 shadow-lg">
-                                            {d.steps.toLocaleString()} {t('stepsCount' as any)}
+                                            {d.steps.toLocaleString('en-US')} {t('stepsCount' as any)}
                                         </div>
 
                                         {/* Bar */}
@@ -311,7 +311,7 @@ export default function MyHealth() {
                             <div className="p-3 rounded-xl" style={{ background: 'var(--bg-main)' }}>
                                 <p className="text-xs font-bold opacity-60 mb-1" style={{ color: 'var(--text-primary)' }}>{t('avgSteps' as any)}</p>
                                 <p className="text-xl font-black text-blue-500">
-                                    {Math.round(weeklyData.reduce((s, d) => s + d.steps, 0) / 7).toLocaleString()}
+                                    {Math.round(weeklyData.reduce((s, d) => s + d.steps, 0) / 7).toLocaleString('en-US')}
                                 </p>
                             </div>
                             <div className="p-3 rounded-xl" style={{ background: 'var(--bg-main)' }}>

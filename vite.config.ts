@@ -12,6 +12,7 @@ const __dirname = path.dirname(__filename);
 export default defineConfig({
   server: {
     host: true, // Listen on all local IPs
+    port: 3000,
   },
   plugins: [
     react(),

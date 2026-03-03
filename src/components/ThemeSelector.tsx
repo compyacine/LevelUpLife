@@ -15,6 +15,7 @@ export default function ThemeSelector({ isOpen, onClose }: ThemeSelectorProps) {
   const handleSelect = (id: ThemeId) => {
     playSuccess();
     setTheme(id);
+    onClose();
   };
 
   return (
@@ -63,9 +64,8 @@ export default function ThemeSelector({ isOpen, onClose }: ThemeSelectorProps) {
               <button
                 key={t.id}
                 onClick={() => handleSelect(t.id)}
-                className={`theme-option relative overflow-hidden rounded-2xl p-5 text-right border-2 transition-all btn-press ${
-                  isActive ? 'active' : ''
-                }`}
+                className={`theme-option relative overflow-hidden rounded-2xl p-5 text-right border-2 transition-all btn-press ${isActive ? 'active' : ''
+                  }`}
                 style={{
                   background: isActive ? `linear-gradient(135deg, ${t.preview[0]}15, ${t.preview[1]}10)` : 'var(--bg-card)',
                   borderColor: isActive ? t.preview[0] : 'var(--border-card)',
